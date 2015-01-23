@@ -6,8 +6,11 @@ class TasksController < ApplicationController
   def index
     # @tasks = Task.all
 
+    # Read all task in DB
     existingTask = Task.all
+    # new array
     @tasks=[]
+    # read each task and if status is false, push to array
     existingTask.each do |ex|
         if ex.status == false
           @tasks.push(ex)

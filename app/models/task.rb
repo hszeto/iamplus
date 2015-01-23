@@ -2,5 +2,6 @@ class Task
   include Mongoid::Document
   field :name, type: String
   field :description, type: String
-  field :status, type: Boolean
+  # use boolean to toggle between a complete/incomplete task
+  field :status, type: Boolean 
 end
