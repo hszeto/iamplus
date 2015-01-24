@@ -5,11 +5,24 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-</head>
-<body>
-<h1>Matt and Henry's To-Do List</h1>
 
-<%= yield %>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+
+</head>
+<body class="container">
+<h1 class="well">Matt and Henry's To-Do List</h1>
+
+<div class="well">
+	<%= yield %>
+</div>
 
 <!-- JS Script. Should have put them in a separate file. -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
