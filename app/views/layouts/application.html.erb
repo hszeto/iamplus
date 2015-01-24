@@ -11,14 +11,23 @@
 
 <%= yield %>
 
-
-<script type="text/javascript">
+<!-- JS Script. Should have put them in a separate file. -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script>
 
   // Tried to use jQuery to hide task, but reload will show everything again.
-  	
 	// function hideRow() {
 	//     $("#myRow").closest("tr").hide();
 	// }
+
+	// Try again at home. the problem was that the DOM load quicker than
+	// rails can read from MongoDB. Added $(document).ready. 
+	// Fire the function only when everything is ready to go.
+	$(document).ready(function(){
+		$('button').on('click', function(){
+			$(this).closest('tr').hide();
+		});
+	});
 
 </script>
 </body>
